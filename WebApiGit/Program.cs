@@ -13,10 +13,9 @@ app.MapGet("/info", () =>
     Info info = new Info();
     return info;
 });
-app.MapGet("/info/api", () =>
+app.MapGet("/info/hash", (string frase) =>
 {
-    Info info = new Info();
-    return info;
+    return Util.GerarMd5(frase);
 });
 
 app.Run();
