@@ -13,5 +13,10 @@ app.MapGet("/info", () =>
     Info info = new Info();
     return info;
 });
+app.MapGet("/info/api", () =>
+{
+    Info info = new Info();
+    return info;
+});
 
 app.Run();
